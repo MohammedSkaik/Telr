@@ -368,8 +368,8 @@ class CreateTelrRequest extends AbstractTelrRequest implements Arrayable
         return data_get($this->data, 'ivp_lang', null);
     }
 
-        /**
-     * Set billing lang
+    /**
+     * Set phone
      *
      * @param $lang
      * @return $this
@@ -382,13 +382,36 @@ class CreateTelrRequest extends AbstractTelrRequest implements Arrayable
     }
 
     /**
-     * Get billing lang
+     * Get phone
      *
      * @return string|null
      */
     public function getPhone()
     {
         return data_get($this->data, 'bill_phone', null);
+    }
+
+    /**
+     * Set phone
+     *
+     * @param $lang
+     * @return $this
+     */
+    public function setPhone1($phone)
+    {
+        $this->data['bill_phone1'] = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return string|null
+     */
+    public function getPhone1()
+    {
+        return data_get($this->data, 'bill_phone1', null);
     }
 
     /**
@@ -436,6 +459,7 @@ class CreateTelrRequest extends AbstractTelrRequest implements Arrayable
             'bill_country' => $this->getBillingCountry(),
             'bill_email' => $this->getBillingEmail(),
             'bill_phone' => $this->getPhone(),
+            'bill_phone1' => $this->getPhone1(),
         ];
     }
 }
