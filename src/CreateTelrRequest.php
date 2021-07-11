@@ -374,7 +374,7 @@ class CreateTelrRequest extends AbstractTelrRequest implements Arrayable
      * @param $lang
      * @return $this
      */
-    public function setPhone($phone)
+    public function setBillingPhone($phone)
     {
         $this->data['bill_phone'] = $phone;
 
@@ -386,7 +386,7 @@ class CreateTelrRequest extends AbstractTelrRequest implements Arrayable
      *
      * @return string|null
      */
-    public function getPhone()
+    public function getBillingPhone()
     {
         return data_get($this->data, 'bill_phone', null);
     }
@@ -397,7 +397,7 @@ class CreateTelrRequest extends AbstractTelrRequest implements Arrayable
      * @param $lang
      * @return $this
      */
-    public function setPhone1($phone)
+    public function setBillingPhone1($phone)
     {
         $this->data['bill_phone1'] = $phone;
 
@@ -409,7 +409,7 @@ class CreateTelrRequest extends AbstractTelrRequest implements Arrayable
      *
      * @return string|null
      */
-    public function getPhone1()
+    public function getBillingPhone1()
     {
         return data_get($this->data, 'bill_phone1', null);
     }
